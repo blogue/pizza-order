@@ -12,10 +12,11 @@ Pizza.prototype.calculateCost = function(){
   } else  {
     this.price += 10;
   }
-  this.toppings.map(function(){
+  for (i=0; i < this.toppings.length; i++) {
     this.price += 1;
-  })
+  }
 }
+
 
 $(document).ready(function(){
 
@@ -31,6 +32,7 @@ $(document).ready(function(){
     });
 
     console.log(newPizza.calculateCost());
+    console.log(newPizza.countToppings());
 
     console.log(pizzaSize);
     console.log(newPizza);
