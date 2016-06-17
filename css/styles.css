@@ -1,4 +1,4 @@
-/*This file is for your custom css.  All yours*/
+
 body {
   background-color: #FF944D;
   font-family: Bangers, Impact;
@@ -28,7 +28,21 @@ body {
 
 label {
   font-size: 20px;
+}
 
+#user-information label  {
+      display: inline-block;
+      float: left;
+      clear: left;
+      width: 250px;
+      text-align: right;
+      padding-right: 10px
+}
+
+#user-information input {
+  display: inline-block;
+  float: left;
+  font-family: sans-serif;
 }
 
 button {

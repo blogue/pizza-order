@@ -28,14 +28,12 @@
         </header>
       </div>
     </div>
-
     <div class="container">
-
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <form id="place-order">
           <div id="new-pizza-order">
-            <!-- Prompt user for name and address -->
+            <!-- Customer name and address -->
             <div id="user-information">
               <div class="form-group">
                 <label for="user-info">Enter Your Name:</label>
@@ -48,58 +46,54 @@
                 <input type="userinfo" id="state">
               </div>
             </div>
-          <div id="pizza-details">
-            <div class="form-group">
-              <h1>Customize your pizza</h1>
-              <label>Select Size: </label>
-              <input type="radio" name="size" value="small" checked="checked"> <label> Small</label>
-              <input type="radio" name="size" value="medium"> <label>Medium</label>
-              <input type="radio" name="size" value="large"> <label>Large</label>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <h3>Meats</h3>
-                <div class="form-group">
-                  <input type="checkbox" name="topping" value="pepperoni"> <label>Pepperoni</label><br>
-                  <input type="checkbox" name="topping" value="salami"> <label>Salami</label><br>
-                  <input type="checkbox" name="topping" value="sausage"> <label>Sausage</label><br>
-                  <input type="checkbox" name="topping" value="chicken"> <label>Chicken</label><br>
-               </div>
+            <!-- Pizza menu options -->
+            <div id="pizza-details">
+              <div class="form-group">
+                <h1>Customize your pizza</h1>
+                <label>Select Size: </label>
+                <input type="radio" name="size" value="small" checked="checked"> <label> Small</label>
+                <input type="radio" name="size" value="medium"> <label>Medium</label>
+                <input type="radio" name="size" value="large"> <label>Large</label>
               </div>
-              <div class="col-md-3">
-                <h3>Veggies</h3>
-                <div class="form-group">
-                  <input type="checkbox" name="topping" value="olives"> <label>Olives</label><br>
-                  <input type="checkbox" name="topping" value="mushrooms"> <label>Mushrooms</label><br>
-                  <input type="checkbox" name="topping" value="bellpeppers"> <label>Bellpeppers</label><br>
-                  <input type="checkbox" name="topping" value="onions"> <label>Onions</label><br>
-               </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <h3>Meats</h3>
+                  <div class="form-group">
+                    <input type="checkbox" name="topping" value="pepperoni"> <label>Pepperoni</label><br>
+                    <input type="checkbox" name="topping" value="salami"> <label>Salami</label><br>
+                    <input type="checkbox" name="topping" value="sausage"> <label>Sausage</label><br>
+                    <input type="checkbox" name="topping" value="chicken"> <label>Chicken</label><br>
+                 </div>
+                </div>
+                <div class="col-md-3">
+                  <h3>Veggies</h3>
+                  <div class="form-group">
+                    <input type="checkbox" name="topping" value="olives"> <label>Olives</label><br>
+                    <input type="checkbox" name="topping" value="mushrooms"> <label>Mushrooms</label><br>
+                    <input type="checkbox" name="topping" value="bellpeppers"> <label>Bellpeppers</label><br>
+                    <input type="checkbox" name="topping" value="onions"> <label>Onions</label><br>
+                 </div>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-     </div>
-
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <button type="button" class="btn btn-lg btn-warning" id="enter-name">Enter Name</button>
-            <button type="submit" class="btn btn-lg btn-info menu-buttons">Add Pizza</button>
-            <button id="show-total" class="btn btn-lg btn-success menu-buttons"type="button" name="button">Order</button>
-          </div>
+      <!-- Buttons for form -->
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <button type="button" class="btn btn-lg btn-warning" id="delivery">Delivery</button>
+          <button type="submit" class="btn btn-lg btn-info menu-buttons">Add Pizza</button>
+          <button id="show-total" class="btn btn-lg btn-success menu-buttons"type="button" name="button">Order</button>
         </div>
-
+      </div>
         </form>
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <div id="output">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div id="output">
 
+              </div>
             </div>
-          </div>
-
-
-
       </div>
     </div> <!-- end container -->
     <footer>
