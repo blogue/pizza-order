@@ -32,14 +32,23 @@ Order.prototype.calculateTotal = function(){
 $(document).ready(function(){
   var newPizzaOrder;
 
-  $("#add-pizza").click(function(){
-    var customer = $("#user-name").val();
-    return newPizzaOrder = new Order(customer);
 
+
+  $("#enter-name").click(function(){
+    debugger;
+    var customer = $("#user-name").val();
+    newPizzaOrder = new Order(customer);
+    $("#user-information").hide();
+    $("#pizza-details").show();
   });
 
   $("#show-total").click(function(){
      console.log(newPizzaOrder.calculateTotal());
+     $("#output").prepend("<h3>Thanks for your purchase, "
+                  + newPizzaOrder.name + "!<br>"
+                  + "Your total is: $" + newPizzaOrder.total + "</h3>");
+        $("#pizza-details").hide();
+        $("button").hide();
   });
 
   $("#place-order").submit(function(event){
@@ -54,11 +63,16 @@ $(document).ready(function(){
     newPizzaOrder.pizzasAdded.push(newPizza);
 
     console.log(newPizzaOrder);
-    $('#order-total').text(newPizza.price);
-    $('#pizza-size').text(newPizza.size);
-    newPizza.toppings.forEach(function(topping){
-    $("#your-toppings").append("<li>" + topping + "</li>")
-    });
+
+    $("#output").show();
+    // $('#order-total').text(newPizza.price);
+    // $('#pizza-size').text(newPizza.size);
+    $("#output").prepend("<h3>Added to order: " + newPizza.size + " pizza.<br>"
+            + "Toppings: " + newPizza.toppings + "<br>"
+            + "Item price: $" + newPizza.price + "</h3>");
+    // newPizza.toppings.forEach(function(topping){
+    // $("#output").append("<li>" + topping + "</li>")
+    // });
 
 
   });
