@@ -37,20 +37,28 @@ $(document).ready(function(){
     var city = $("#city").val();
     var state = $("#state").val();
 
-    console.log(street);
-    newPizzaOrder = new Order(customer);
-    newPizzaOrder.address.push(street);
-    newPizzaOrder.address.push(city);
-    newPizzaOrder.address.push(state);
-
-    $("#user-information").hide();
-    $("#delivery").hide();
-    $("#pizza-details").show();
-    $(".menu-buttons").show();
+    if (customer === "" || customer === null) {
+      alert("Please enter a name!");
+    } else if (street === "" || street === null) {
+      alert("Please enter a street!");
+    } else if (city === "" || city === null) {
+      alert("Please enter a city!");
+    } else if (state === "" || state === null) {
+      alert("Please enter a state!");
+    } else {
+      newPizzaOrder = new Order(customer);
+      newPizzaOrder.address.push(street);
+      newPizzaOrder.address.push(city);
+      newPizzaOrder.address.push(state);
+      $("#user-information").hide();
+      $("#delivery").hide();
+      $("#pizza-details").show();
+      $(".menu-buttons").show();
+    }
   });
 
   $("#show-total").click(function(){
-     console.log(newPizzaOrder.calculateTotal());
+    newPizzaOrder.calculateTotal();
      $("#output").prepend("<h3>Thanks for your order, "
                   + newPizzaOrder.name + "!<br>"
                   + "Your total is: $" + newPizzaOrder.total + "</h3>");
