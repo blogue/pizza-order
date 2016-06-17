@@ -1,1 +1,10 @@
 /*This file is for your custom css.  All yours*/
+footer {
+   background-color: #F3F3F3;
+   padding-top: 10px;
+   padding-bottom: 0px;
+   padding-left: 20px;
+   position:fixed;
+   bottom:0;
+   width:100%;
+}
