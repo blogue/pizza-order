@@ -1,10 +1,10 @@
-function Pizza(size, price){
+function Pizza(size){
   this.size = size;
   this.toppings = [];
-  this.price = price;
+  this.price = 0;
 }
 
-Pizza.prototype.price = function(){
+Pizza.prototype.calculateCost = function(){
   if (this.size === "small") {
     this.price += 5;
   } else if (this.size === "medium") {
@@ -12,15 +12,28 @@ Pizza.prototype.price = function(){
   } else  {
     this.price += 10;
   }
+  this.toppings.map(function(){
+    this.price += 1;
+  })
 }
 
 $(document).ready(function(){
 
-  $("#input").submit(function(event){
+  $("#add-pizza").submit(function(event){
     event.preventDefault();
-    var input = ($("#blank").val());
 
-    var output = "";
+    var pizzaSize = $("input[name='size']:checked").val();
+    var newPizza = new Pizza(pizzaSize);
+    console.log($('input[name="topping"]:checked').serialize());
+
+    $('input[name="topping"]:checked').each(function() {
+       newPizza.toppings.push(this.value);
+    });
+
+    console.log(newPizza.calculateCost());
+
+    console.log(pizzaSize);
+    console.log(newPizza);
 
     $('#output').text(output);
 
