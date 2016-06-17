@@ -12,6 +12,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
     <!-- Jquery JS -->
     <script src="js/jquery-2.2.4.js" type="text/javascript"></script>
     <!-- Bootstrap JS -->
@@ -23,7 +24,7 @@
     <div class="jumbotron">
       <div class="container">
         <header>
-          <h1>Pizza Shack</h1>
+          <h1>Pizza Avalanche</h1>
         </header>
       </div>
     </div>
@@ -37,8 +38,14 @@
             <!-- Prompt user for name and address -->
             <div id="user-information">
               <div class="form-group">
-                <label for="userName">Enter Your Name:</label>
-                <input type="text" id="user-name">
+                <label for="user-info">Enter Your Name:</label>
+                <input type="text" id="user-name"><br>
+                <label for="user-info">Street: </label>
+                <input type="text" id="street"><br>
+                <label for="user-info">City: </label>
+                 <input type="text" id="city"><br>
+                <label for="userName">State: </label>
+                <input type="userinfo" id="state">
               </div>
             </div>
           <div id="pizza-details">
@@ -49,13 +56,27 @@
               <input type="radio" name="size" value="medium"> <label>Medium</label>
               <input type="radio" name="size" value="large"> <label>Large</label>
             </div>
+            <div class="row">
+              <div class="col-md-3">
+                <h3>Meats</h3>
+                <div class="form-group">
+                  <input type="checkbox" name="topping" value="pepperoni"> <label>Pepperoni</label><br>
+                  <input type="checkbox" name="topping" value="salami"> <label>Salami</label><br>
+                  <input type="checkbox" name="topping" value="sausage"> <label>Sausage</label><br>
+                  <input type="checkbox" name="topping" value="chicken"> <label>Chicken</label><br>
+               </div>
+              </div>
+              <div class="col-md-3">
+                <h3>Veggies</h3>
+                <div class="form-group">
+                  <input type="checkbox" name="topping" value="olives"> <label>Olives</label><br>
+                  <input type="checkbox" name="topping" value="mushrooms"> <label>Mushrooms</label><br>
+                  <input type="checkbox" name="topping" value="bellpeppers"> <label>Bellpeppers</label><br>
+                  <input type="checkbox" name="topping" value="onions"> <label>Onions</label><br>
+               </div>
+              </div>
+            </div>
 
-            <div class="form-group">
-              <input type="checkbox" name="topping" value="pepperoni"> <label>Pepperoni</label><br>
-              <input type="checkbox" name="topping" value="salami"> <label>Salami</label><br>
-              <input type="checkbox" name="topping" value="sausage"> <label>Sausage</label><br>
-              <input type="checkbox" name="topping" value="chicken"> <label>Chicken</label><br>
-           </div>
           </div>
         </div>
       </div>
@@ -82,7 +103,7 @@
       </div>
     </div> <!-- end container -->
     <footer>
-      <p>&copy; 2016 Epicodus Pair Project, Inc.</p>
+      <p>&copy; 2016 Pizza Avalance, Inc.</p>
     </footer>
   </body>
 </html>

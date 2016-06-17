@@ -1,12 +1,7 @@
 /*This file is for your custom css.  All yours*/
-footer {
-   background-color: #F3F3F3;
-   padding-top: 10px;
-   padding-bottom: 0px;
-   padding-left: 20px;
-   position:fixed;
-   bottom:0;
-   width:100%;
+body {
+  background-color: #FF944D;
+  font-family: Bangers, Impact;
 }
 
 #pizza-details, #output, .menu-buttons  {
@@ -15,6 +10,52 @@ footer {
 
 .jumbotron {
   background-image: url(../img/pizza.png);
-  border-bottom: solid 1px black;
-  font-family: impact;
+  border-bottom: solid 5px black;
+
+}
+
+.jumbotron h1 {
+  font-size: 100px;
+  font-family: Bangers, impact;
+  text-align: center;
+  color: white;
+  text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+label {
+  font-size: 20px;
+
+}
+
+button {
+  border: solid black 1px;
+  font-size: 25px;
+  text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+}
+
+footer {
+   background-color: #F0391D;
+   padding-top: 10px;
+   padding-bottom: 0px;
+   padding-left: 20px;
+   position:fixed;
+   bottom:0;
+   width:100%;
+   border-top: solid 1px black;
+   color: white;
+   font-size: 20px;
+   text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
 }

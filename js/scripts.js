@@ -28,14 +28,10 @@ Order.prototype.calculateTotal = function(){
   this.total += this.pizzasAdded[i].price;
 }
 
-
 $(document).ready(function(){
   var newPizzaOrder;
 
-
-
   $("#enter-name").click(function(){
-    debugger;
     var customer = $("#user-name").val();
     newPizzaOrder = new Order(customer);
     $("#user-information").hide();
@@ -67,15 +63,9 @@ $(document).ready(function(){
     console.log(newPizzaOrder);
 
     $("#output").show();
-    // $('#order-total').text(newPizza.price);
-    // $('#pizza-size').text(newPizza.size);
     $("#output").prepend("<h3>Added to order: " + newPizza.size + " pizza.<br>"
             + "Toppings: " + newPizza.toppings + "<br>"
             + "Item price: $" + newPizza.price + "</h3>");
-    // newPizza.toppings.forEach(function(topping){
-    // $("#output").append("<li>" + topping + "</li>")
-    // });
-
 
   });
 });
