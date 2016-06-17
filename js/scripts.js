@@ -39,7 +39,9 @@ $(document).ready(function(){
     var customer = $("#user-name").val();
     newPizzaOrder = new Order(customer);
     $("#user-information").hide();
+    $("#enter-name").hide();
     $("#pizza-details").show();
+    $(".menu-buttons").show();
   });
 
   $("#show-total").click(function(){

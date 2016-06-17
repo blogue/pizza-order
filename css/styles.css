@@ -9,6 +9,12 @@ footer {
    width:100%;
 }
 
-#pizza-details, #output  {
+#pizza-details, #output, .menu-buttons  {
   display: none;
+}
+
+.jumbotron {
+  background-image: url(../img/pizza.png);
+  border-bottom: solid 1px black;
+  font-family: impact;
 }
