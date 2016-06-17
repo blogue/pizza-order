@@ -14,8 +14,7 @@ body {
 
 }
 
-.jumbotron h1 {
-  font-size: 100px;
+.jumbotron h1, .jumbotron h3 {
   font-family: Bangers, impact;
   text-align: center;
   color: white;
@@ -23,7 +22,7 @@ body {
       -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
-       1px 1px 0 #000;
+       3px 3px 0 #000;
 }
 
 label {

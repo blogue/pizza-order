@@ -54,7 +54,8 @@ $(document).ready(function(){
      $("#output").prepend("<h3>Thanks for your order, "
                   + newPizzaOrder.name + "!<br>"
                   + "Your total is: $" + newPizzaOrder.total + "</h3>");
-     $("#output").append("<h3>Delivery address: " + newPizzaOrder.address + "</h3>");
+     $("#output").append("<h3>Delivery address: " + newPizzaOrder.address + "<br>"
+     +"You can expect your order within 45 minutes!" + "</h3>");
         $("#pizza-details").hide();
         $("button").hide();
   });
