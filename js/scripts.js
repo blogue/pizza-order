@@ -25,19 +25,19 @@ $(document).ready(function(){
 
     var pizzaSize = $("input[name='size']:checked").val();
     var newPizza = new Pizza(pizzaSize);
-    console.log($('input[name="topping"]:checked').serialize());
+    // console.log($('input[name="topping"]:checked').serialize());
 
     $('input[name="topping"]:checked').each(function() {
        newPizza.toppings.push(this.value);
     });
 
-    console.log(newPizza.calculateCost());
-    console.log(newPizza.countToppings());
+    newPizza.calculateCost();
 
-    console.log(pizzaSize);
-    console.log(newPizza);
-
-    $('#output').text(output);
+    $('#order-total').text(newPizza.price);
+    $('#pizza-size').text(newPizza.size);
+    newPizza.toppings.forEach(function(topping){
+      $("#your-toppings").append("<li>" + topping + "</li>")
+    });
 
   });
 });
