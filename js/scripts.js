@@ -1,6 +1,18 @@
-/*This file is for your custom js.  All yours*/
+function Pizza(size, price){
+  this.size = size;
+  this.toppings = [];
+  this.price = price;
+}
 
-// Calls input from form-input.html
+Pizza.prototype.price = function(){
+  if (this.size === "small") {
+    this.price += 5;
+  } else if (this.size === "medium") {
+    this.price += 8;
+  } else  {
+    this.price += 10;
+  }
+}
 
 $(document).ready(function(){
 
