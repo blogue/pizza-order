@@ -19,10 +19,9 @@ Pizza.prototype.calculateCost = function(){
   } else  {
     this.price += 10.99;
   }
-  for (i=0; i < this.toppings.length; i++) {
-    this.price += 1.25;
+  this.price += this.toppings.length * 1.25;
   }
-}
+
 
 Order.prototype.calculateTotal = function(){
   for (i=0; i < this.pizzasAdded.length; i++)
